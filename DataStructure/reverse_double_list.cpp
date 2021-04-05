@@ -72,6 +72,19 @@ void free_doubly_linked_list(DoublyLinkedListNode* node) {
  * };
  *
  */
+DoublyLinkedListNode* insertHead(DoublyLinkedListNode* head,int data){
+    if(!head)
+        return new DoublyLinkedListNode(data);
+    DoublyLinkedListNode *node = new DoublyLinkedListNode(data);
+    head->prev = node;
+    node->next = head;
+    return node;
+}
 DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
-    
+    DoublyLinkedListNode*node = nullptr;
+    while(head){
+        node = insertHead(node,head->data);
+        head= head->next;
+    }
+    return node;
 }

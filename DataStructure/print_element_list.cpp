@@ -62,5 +62,4 @@ void printLinkedList(SinglyLinkedListNode* head) {
         cout<<head->data<<endl;
         head = head->next;
     }
-
 }

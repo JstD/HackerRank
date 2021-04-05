@@ -58,5 +58,7 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
  *
  */
 SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
-    SinglyLinkedListNode *head = new SinglyLinkedListNode(data)
+    SinglyLinkedListNode *head = new SinglyLinkedListNode(data);
+    head->next = llist;
+    return head;
 }
